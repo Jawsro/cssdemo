@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/9.css">
+</head>
+<body>
+ <div class="loading">Loading</div>
+ <script>
+    "use strict";
+    var loading = document.querySelector(".loading");
+    var letters = loading.textContent.split("");
+    loading.textContent = "";
+    letters.forEach(function (letter, i) {
+        var span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = i / 10 + "s";
+        loading.append(span);
+    });
+ </script>
+</body>
+</html>
